@@ -1,6 +1,7 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  // this.oldStep = makeDancer.prototype.step.call(this, timeBetweenSteps);
+  this.$node.addClass('blinkyDancer');
+  this.$node.prepend('<img id=blinkyDancer src=img/flash.gif>')
 };
 
 // inherit methods and set constructor properly
