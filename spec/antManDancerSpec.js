@@ -31,11 +31,11 @@ describe('antManDancer', function() {
       expect(antManDancer.step.callCount).to.be.equal(2);
     });
 
-    it('should antManDancer the node 2times per one dance move', function() {
+    it('should antManDancer the node 1 times per one dance move', function() {
       sinon.spy(antManDancer.$node, 'animate');
       expect(antManDancer.$node.animate.callCount).to.be.equal(0);
       clock.tick(timeBetweenSteps);
-      expect(antManDancer.$node.animate.callCount).to.be.equal(2);
+      expect(antManDancer.$node.animate.callCount).to.be.equal(1);
     });
   });
 

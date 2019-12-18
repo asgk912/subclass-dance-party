@@ -37,7 +37,7 @@ $(document).ready(function() {
     if(window.dancers.length === 1) {
       var distanceBetweenDancers = 0;
     } else {
-      var distanceBetweenDancers = $("body").width() / (window.dancers.length - 1);
+      var distanceBetweenDancers = ( $("body").width() / (window.dancers.length - 1) ) * 0.75;
     }
 
     for (let i = 0; i < window.dancers.length; i++) {

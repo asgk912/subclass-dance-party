@@ -32,17 +32,21 @@ body, a:link, a:visited, a:active{
 
 .dancer{
   position:absolute;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
 }
 
-.dancer:hover {
-  -webkit-transform: scaleY(-1);
-  transform: scaleY(-1);
-  border: 2px solid #ff0000;
+.dancer:hover{
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 .blinkyDancer{
   height: 100px;
   width: 100px;
+}
+.blinkyDancer:hover{
+  border: 3px solid #ff0000;
 }
 #blinkyDancer{
   margin: 0px;
@@ -52,22 +56,27 @@ body, a:link, a:visited, a:active{
   width: 100%;
 }
 
-.vDancer{
+.horizontalDancer{
   height: 100px;
   width: 100px;
 }
-#vDancer{
+.horizontalDancer:hover{
+  border: 3px solid #0000ff;
+}
+#horizontalDancer{
   margin: 0px;
   border: 0px;
   padding: 0px;
   height: 100%;
   width: 100%;
-  /* position: relative; */
 }
 
-#antmanDancer{
+.antManDancer:hover{
+  border: 3px solid #00ff00;
+}
+#antManDancer{
   margin: 0px;
-  border: 0px;
+  padding: 0px;
   height: 100%;
   width: 100%;
 }
