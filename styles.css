@@ -33,6 +33,13 @@ body, a:link, a:visited, a:active{
 .dancer{
   position:absolute;
 }
+
+.dancer:hover {
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  border: 2px solid #ff0000;
+}
+
 .blinkyDancer{
   height: 100px;
   width: 100px;
@@ -40,19 +47,22 @@ body, a:link, a:visited, a:active{
 #blinkyDancer{
   margin: 0px;
   border: 0px;
+  padding: 0px;
   height: 100%;
   width: 100%;
 }
 
-.squareDancer{
+.vDancer{
   height: 100px;
   width: 100px;
 }
-#squareDancer{
+#vDancer{
   margin: 0px;
   border: 0px;
+  padding: 0px;
   height: 100%;
   width: 100%;
+  /* position: relative; */
 }
 
 #antmanDancer{
@@ -61,3 +71,4 @@ body, a:link, a:visited, a:active{
   height: 100%;
   width: 100%;
 }
+

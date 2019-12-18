@@ -32,8 +32,13 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
   });
   $('.lineUpButton').on('click', function(event) {
-    var middleInVertical = $("body").height() / 2
-    var distanceBetweenDancers = $("body").width() / (window.dancers.length - 1);
+    var middleInVertical = $("body").height() / 2;
+
+    if(window.dancers.length === 1) {
+      var distanceBetweenDancers = 0;
+    } else {
+      var distanceBetweenDancers = $("body").width() / (window.dancers.length - 1);
+    }
 
     for (let i = 0; i < window.dancers.length; i++) {
       window.dancers[i].setPosition(middleInVertical, distanceBetweenDancers * i );
