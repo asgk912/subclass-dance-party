@@ -45,4 +45,30 @@ $(document).ready(function() {
     }
   });
 
+  $('.dancer').on('click', function(event) {
+    var currentTop = this.topPosition;
+    var currentLeft = this.leftPosition;
+
+    var minDistIndex = 0;
+    var minDist;
+    var newDist;
+    if(this !== window.dancers[0]) {
+      minDist = (currentTop - window.dancer[0].topPosition) ** 2 + (currentBottom - window.dancer[0].topPosition) ** 2;
+    } else {
+      minDist = (currentTop - window.dancer[1].topPosition) ** 2 + (currentBottom - window.dancer[1].topPosition) ** 2;
+    }
+    for (let i = 1; i < window.dancers.length; i++) {
+      if(window.dancers[i] !== this){
+        newDist = (currentTop - window.dancer[i].topPosition) ** 2 + (currentBottom - window.dancer[i].topPosition) ** 2
+        if(minDist > newDist){
+          minDist = newDist;
+          minDistIndex = i;
+        }
+      }
+    }
+    var closeTop = window.dancer[minDistIndex].topPosition;
+    var closeLeft = window.dancer[minDistIndex].leftPosition;
+
+    this.setPosition(closeTop +100, closeLeft +100);
+  });
 });
