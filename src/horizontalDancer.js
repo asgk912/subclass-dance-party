@@ -17,13 +17,13 @@ makeHorizontalDancer.prototype.step = function() {
     left: this.leftPosition + 50
     // top: this.topPosition - 50
   }, {
-    duration: this.timeBetweenSteps,
+    duration: this.timeBetweenSteps / 2,
     complete: function() {
       horizontalDancer.$node.animate({
         left: horizontalDancer.leftPosition - 50
         // top: horizontalDancer.topPosition
       }, {
-        duration: horizontalDancer.timeBetweenSteps,
+        duration: horizontalDancer.timeBetweenSteps / 2,
       });
     }
   });
